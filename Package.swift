@@ -10,13 +10,13 @@ let package = Package(
     products: [
         .library(
             name: "ImageSlideshow",
-            targets: ["ImageSlideshow"]),
+            targets: ["ImageSlideshow", "ImageSlideshowSDWebImage"]),
 //        .library(
 //            name: "ImageSlideshow/Alamofire",
 //            targets: ["ImageSlideshowAlamofire"]),
-        .library(
-            name: "ImageSlideshow/SDWebImage",
-            targets: ["ImageSlideshowSDWebImage"]),
+//        .library(
+//            name: "ImageSlideshow/SDWebImage",
+//            targets: ["ImageSlideshowSDWebImage"]),
 //        .library(
 //            name: "ImageSlideshow/Kingfisher",
 //            targets: ["ImageSlideshowKingfisher"])
@@ -42,7 +42,8 @@ let package = Package(
                 "Classes/Core/UIImage+AspectFit.swift",
                 "Classes/Core/UIImageView+Tools.swift",
                 "Classes/Core/ZoomAnimatedTransitioning.swift",
-                "Classes/InputSources/VideoSource.swift",
+//                "Classes/InputSources/VideoSource.swift",
+//                "Classes/InputSources/SDWebImageSource.swift",
                 "Assets/ic_cross_white@2x.png",
                 "Assets/ic_cross_white@3x.png",
             ]),
@@ -55,7 +56,7 @@ let package = Package(
             name: "ImageSlideshowSDWebImage",
             dependencies: ["ImageSlideshow", "SDWebImage"],
             path: "ImageSlideshow/Classes/InputSources",
-            sources: ["SDWebImageSource.swift"]),
+            sources: ["SDWebImageSource.swift", "VideoSource.swift"]),
 //        .target(
 //            name: "ImageSlideshowKingfisher",
 //            dependencies: ["ImageSlideshow", "Kingfisher"],

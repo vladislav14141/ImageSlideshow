@@ -32,7 +32,7 @@ Image slideshow is a Swift library providing customizable image slideshow with c
   s.requires_arc = true
 
   s.subspec 'Core' do |core|
-    core.source_files = 'ImageSlideshow/Classes/Core/**/*'
+    core.source_files = 'ImageSlideshow/Classes/**/*'
     core.resources = 'ImageSlideshow/Assets/*.png'
   end
 
